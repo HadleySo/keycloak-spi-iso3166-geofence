@@ -1,0 +1,15 @@
+{
+    "authenticators": [
+        {
+            "name": "ISO3166 Authenticator",
+            "fileName": "iso3166-authenticator.js",
+            "description": "Blocks authentication unless in approved country"
+        }
+    ],
+    "policies": [
+    ],
+    "mappers": [
+    ],
+    "saml-mappers": [
+    ]
+}
