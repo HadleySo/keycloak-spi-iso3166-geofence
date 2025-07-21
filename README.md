@@ -8,7 +8,7 @@ This SPI provides a mechanism to block authentication from countries not listed 
 
 **Dependencies:**
 
-*   **CloudFlare:**  This SPI is dependant on the `CloudFront-Viewer-Country` header.
+*   **CloudFront:**  This SPI is dependant on the `CloudFront-Viewer-Country` header.
 *   **`countryUse` user attribute:**  The `countryUse` user attribute must be set manually for every user or federated (eg LDAP / AD).
 
 **Override:**
@@ -17,7 +17,7 @@ If any of the values in the `countryUse` user attribute is set to `gxr`, the cou
 
 **Usage:**
 
-1. Create the `countryUse` user attribute and add entries manually or create a user attribute mapping from AD / LDAP
+1. Create the `countryUse` multi-valued user attribute and create user attribute AD / LDAP mapping. Or add entries manually
 2. Copy the JAR to the Keycloak `providers/` directory, then run `bin/kc.[sh|bat] build`.
 3. Add this provider as REQUIRED at the end of the authentication flow and encapsulate the existing authenticators into a separate REQUIRED authentication subflow.
 
